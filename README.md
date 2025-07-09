@@ -41,37 +41,3 @@ engine.addDocument("doc1", "path/to/document1.txt");
 engine.addDocument("doc2", "path/to/document2.txt");
 SearchResults results = engine.search("your query here");
 ```
-
-### Advanced Configuration
-```java
-SearchConfig config = new SearchConfig.Builder()
-    .setMaxResults(10)
-    .enableStopwords(true)
-    .setStemming(true)
-    .setBoostRecent(true)
-    .build();
-
-SearchEngine engine = new SearchEngine(config);
-```
-
-## Configuration Options
-
-- `maxResults`: Maximum number of search results (default: 100)
-- `stopwordsEnabled`: Enable/disable stopword filtering (default: true)
-- `stemmingEnabled`: Enable/disable word stemming (default: true)
-- `boostRecent`: Boost score of more recent documents (default: false)
-- `snippetLength`: Length of result snippets in characters (default: 150)
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## Support
-
-- Submit bug reports via GitHub Issues
-- Join our community Discord server for discussions
-- Check out the wiki for advanced usage examples
